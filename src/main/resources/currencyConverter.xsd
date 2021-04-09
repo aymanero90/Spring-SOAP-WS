@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.currencyconverter.org/api/converter"
+            xmlns:tns="http://www.currencyconverter.org/api/converter"
+            elementFormDefault="qualified">
+
+    <xsd:element name="ConversionRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="fromCurrency" type="xsd:string"/>
+                <xsd:element name="toCurrency" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+    <!-- We could use a simple type but for clarity an entity class will be generated -->
+    <xsd:element name="ConversionResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="rate" type="xsd:double"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Dummy body for C# request -->
+    <xsd:element name="CurrencyListRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="list" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- the response is a list of string for all available currencies by ECB -->
+    <xsd:element name="CurrencyListResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="currencyList" type="xsd:string" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
