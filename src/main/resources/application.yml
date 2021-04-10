@@ -1,0 +1,4 @@
+web:
+  service:
+    username: admin
+    password: admin

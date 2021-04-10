@@ -18,6 +18,7 @@
         <jaxb2-maven-plugin.version>2.5.0</jaxb2-maven-plugin.version>
         <jaxb-impl.version>2.3.3</jaxb-impl.version>
         <commons-math3-version>3.6.1</commons-math3-version>
+        <spring-ws-security-version>3.0.10.RELEASE</spring-ws-security-version>
     </properties>
     <dependencies>
         <dependency>
@@ -44,6 +45,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-math3</artifactId>
             <version>${commons-math3-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.ws</groupId>
+            <artifactId>spring-ws-security</artifactId>
+            <version>${spring-ws-security-version}</version>
         </dependency>
 
         <dependency>
